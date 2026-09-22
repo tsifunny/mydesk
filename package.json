@@ -1,0 +1,24 @@
+{
+  "name": "mydesk-next",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node build.cjs",
+    "start": "node tools/launch.cjs",
+    "start:server": "node server.cjs",
+    "doctor": "node tools/doctor.cjs",
+    "test": "node --test tests/*.test.cjs",
+    "test:offline": "node --test --test-skip-pattern=\"集成|实时数据会配\" tests/*.test.cjs",
+    "check:backend": "node tools/check-backend.cjs"
+  },
+  "dependencies": {
+    "@bitget-ai/bitget-agent-sdk": "^3.3.0",
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "jsdom": "^30.0.1",
+    "socks": "2.8.10",
+    "undici": "^8.10.2"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  }
+}
